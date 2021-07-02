@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scroll To Element - Example 3</title>
+	<link rel="stylesheet" type="text/css" href="./examples.css">
+	<script type="text/javascript" src="../dist/scrollTo.js"></script>
+</head>
+<body>
+
+	<div id="nav">
+		<a class="item" href="#destination-section-1">Scroll to Section 1</a>
+		<a class="item" href="#destination-section-2">Scroll to Section 2</a>
+		<a class="item" href="#destination-section-3">Scroll to Section 3</a>
+	</div>
+
+	<h1>Multiple Elements</h1>
+	<p>Set scroll for multiple elements with the same settings and <i>href</i> attribute as destination, using function <i>allScrollTo()</i></p>
+
+	<div id="destination-section-1" class="destination-section">Section 1</div>
+	<div id="destination-section-2" class="destination-section">Section 2</div>
+	<div id="destination-section-3" class="destination-section">Section 3</div>
+
+	<script type="text/javascript">
+
+		let nav_items = document.querySelectorAll('#nav .item');
+
+		allScrollTo(nav_items, {
+			duration : 300, 
+			easing : 'easeInOutCubic', 
+			callback: () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+		});
+
+	</script>
+
+</body>
+</html>

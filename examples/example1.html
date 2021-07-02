@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scroll To Element - Example 1</title>
+	<link rel="stylesheet" type="text/css" href="./examples.css">
+	<script type="text/javascript" src="../dist/scrollTo.js"></script>
+</head>
+<body>
+
+	<div id="nav">
+		<a id="nav-item-1" class="item" href="#">Scroll to Section 1</a>
+		<a id="nav-item-2" class="item" href="#">Scroll to Section 2</a>
+		<a id="nav-item-3" class="item" href="#">Scroll to Section 3</a>
+	</div>
+
+	<h1>Single Elements</h1>
+	<p>Set scroll for single elements with different settings, using the function <i>scrollTo()</i></p>
+
+	<div id="destination-section-1" class="destination-section">Section 1</div>
+	<div id="destination-section-2" class="destination-section">Section 2</div>
+	<div id="destination-section-3" class="destination-section">Section 3</div>
+
+	<script type="text/javascript">
+
+		var nav_item_1 = document.querySelector('#nav-item-1');
+		var nav_item_2 = document.querySelector('#nav-item-2');
+		var nav_item_3 = document.querySelector('#nav-item-3');
+		var element_destination_1 = document.querySelector('#destination-section-1');
+		var element_destination_2 = document.querySelector('#destination-section-2');
+		var element_destination_3 = document.querySelector('#destination-section-3');
+
+		nav_item_1.addEventListener('click', () => {
+		  scrollTo(element_destination_1);
+		});
+
+		nav_item_2.addEventListener('click', () => {
+		  scrollTo(
+		    element_destination_2, {
+		    	duration: 300
+		    }
+		  );
+		});
+
+		nav_item_3.addEventListener('click', () => {
+		  scrollTo(
+		    element_destination_3, {
+		    	duration: 500,
+		    	easing: 'easeInOutQuint',
+		    	callback: messageAfterScroll
+		    }
+		  );
+		});
+
+		function messageAfterScroll() {
+			console.log('scroll has finished');
+		}
+
+	</script>
+
+</body>
+</html>

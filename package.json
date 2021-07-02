@@ -1,0 +1,41 @@
+{
+  "name": "simple-scroll-to-element",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/scrollTo.js",
+  "browserslist": [
+    "cover 99.5%"
+  ],
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "asd"
+  },
+  "keywords": [
+    "scroll",
+    "scrolling",
+    "scroll",
+    "scrollto",
+    "element",
+    "smooth",
+    "scroll",
+    "smooth",
+    "scrolling",
+    "javascript",
+    "scroll",
+    "animated",
+    "scroll",
+    "simple",
+    "scroll"
+  ],
+  "author": "Luiz Perez",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
