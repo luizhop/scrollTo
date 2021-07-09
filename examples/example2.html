@@ -3,7 +3,7 @@
 <head>
 	<title>Scroll To Element - Example 2</title>
 	<link rel="stylesheet" type="text/css" href="./examples.css">
-	<script type="text/javascript" src="../dist/scrollTo.js"></script>
+	<script type="text/javascript" src="../dist/simpleScrollTo.js"></script>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
 	</div>
 
 	<h1>Single Elements with href</h1>
-	<p>Set scroll for single elements with different settings and <i>href</i> attribute as destination, using function <i>scrollToHref()</i></p>
+	<p>Set scroll for single elements with different settings and <i>href</i> attribute as destination, using function <i>simpleScrollToHref()</i></p>
 
 	<div id="destination-section-1" class="destination-section">Section 1</div>
 	<div id="destination-section-2" class="destination-section">Section 2</div>
@@ -24,19 +24,19 @@
 
 		let nav_items = document.querySelectorAll('#nav .item');
 
-		scrollToHref(nav_items[0],{
+		simpleScrollToHref(nav_items[0],{
 			duration : 200, 
 			easing : 'easeInOutCubic', 
 			callback: () => console.log(`Just finished scrolling to Section 1`)
 		});
 
-		scrollToHref(nav_items[1],{
+		simpleScrollToHref(nav_items[1],{
 			duration : 300, 
 			easing : 'easeInQuart', 
 			callback: () => console.log(`Just finished scrolling to Section 2`)
 		});
 
-		scrollToHref(nav_items[2],{
+		simpleScrollToHref(nav_items[2],{
 			duration : 400, 
 			easing : 'easeOutQuint', 
 			callback: () => console.log(`Just finished scrolling to Section 3`)

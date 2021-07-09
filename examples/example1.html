@@ -3,7 +3,7 @@
 <head>
 	<title>Scroll To Element - Example 1</title>
 	<link rel="stylesheet" type="text/css" href="./examples.css">
-	<script type="text/javascript" src="../dist/scrollTo.js"></script>
+	<script type="text/javascript" src="../dist/simpleScrollTo.js"></script>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
 	</div>
 
 	<h1>Single Elements</h1>
-	<p>Set scroll for single elements with different settings, using the function <i>scrollTo()</i></p>
+	<p>Set scroll for single elements with different settings, using the function <i>simpleScrollTo()</i></p>
 
 	<div id="destination-section-1" class="destination-section">Section 1</div>
 	<div id="destination-section-2" class="destination-section">Section 2</div>
@@ -30,11 +30,11 @@
 		var element_destination_3 = document.querySelector('#destination-section-3');
 
 		nav_item_1.addEventListener('click', () => {
-		  scrollTo(element_destination_1);
+		  simpleScrollTo(element_destination_1);
 		});
 
 		nav_item_2.addEventListener('click', () => {
-		  scrollTo(
+		  simpleScrollTo(
 		    element_destination_2, {
 		    	duration: 300
 		    }
@@ -42,7 +42,7 @@
 		});
 
 		nav_item_3.addEventListener('click', () => {
-		  scrollTo(
+		  simpleScrollTo(
 		    element_destination_3, {
 		    	duration: 500,
 		    	easing: 'easeInOutQuint',

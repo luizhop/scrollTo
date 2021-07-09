@@ -1,8 +1,8 @@
 {
-  "name": "simple-scroll-to-element",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src/scrollTo.js",
+  "name": "simple-scroll-to",
+  "version": "0.2.0",
+  "description": "Simple scroll to element",
+  "main": "./src/simpleScrollTo.js",
   "browserslist": [
     "cover 99.5%"
   ],
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "asd"
+    "url": "https://github.com/luizhop/simpleScrollTo"
   },
   "keywords": [
     "scroll",

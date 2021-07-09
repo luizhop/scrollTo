@@ -1,4 +1,4 @@
-# scrollTo
+# SimpleScrollTo
 Animate scroll to anchor HTML elements.<br>
 This library is a helper to use the scrolling code by Pawel Grzybek, on https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 
@@ -7,13 +7,13 @@ Below there is a guidance on how to start using it, also you can see it working 
 
 1. First thing you'll need is load the library into your project.
 ```html
-<script type="text/javascript" src="../dist/scrollTo.js"></script>
+<script type="text/javascript" src="../dist/simpleScrollTo.js"></script>
 ```
 
 2. Once the library is loaded, you can use different methods to animate the scroll to elements.
 
 #### **Method 1:** 
-Set scroll for single elements using different settings, with the function `scrollTo()`
+Set scroll for single elements using different settings, with the function `simpleScrollTo()`
 
 ```html
 <a id="nav-item" class="item" href="#">Navigation Item</a>
@@ -25,7 +25,7 @@ let nav_item = document.querySelector('#nav-item');
 let destination_item = document.querySelector('#destination-element');
 
 nav_item.addEventListener( 'click', () => {
-    scrollTo(
+    simpleScrollTo(
         destination_item, {
             duration: 500,
             easing: 'easeInOutQuint',
@@ -40,7 +40,7 @@ function messageAfterScroll() {
 ```
 
 #### **Method 2:** 
-Set scroll for single elements using different settings and `href` attribute as destination, using function `scrollToHref()`
+Set scroll for single elements using different settings and `href` attribute as destination, using function `simpleScrollToHref()`
 
 ```html
 <div id="nav">
@@ -57,19 +57,19 @@ Set scroll for single elements using different settings and `href` attribute as 
 ```javascript
 let nav_items = document.querySelectorAll('#nav .item');
 
-scrollToHref( nav_items[0], {
+simpleScrollToHref( nav_items[0], {
     duration : 200, 
     easing : 'easeInOutCubic', 
     callback: () => console.log(`Just finished scrolling to Section 1`)
 });
 
-scrollToHref( nav_items[1], {
+simpleScrollToHref( nav_items[1], {
     duration : 300, 
     easing : 'easeInQuart', 
     callback: () => console.log(`Just finished scrolling to Section 2`)
 });
 
-scrollToHref( nav_items[2], {
+simpleScrollToHref( nav_items[2], {
     duration : 400, 
     easing : 'easeOutQuint', 
     callback: () => console.log(`Just finished scrolling to Section 3`)
@@ -77,7 +77,7 @@ scrollToHref( nav_items[2], {
 ```
 
 #### **Method 3:** 
-Set scroll for multiple elements with the same settings and `href` attribute as destination, using function `allScrollTo()`
+Set scroll for multiple elements with the same settings and `href` attribute as destination, using function `allSimpleScrollTo()`
 
 
 
@@ -96,7 +96,7 @@ Set scroll for multiple elements with the same settings and `href` attribute as 
 ```javascript
 let nav_items = document.querySelectorAll('#nav .item');
 
-allScrollTo( nav_items, {
+allSimpleScrollTo( nav_items, {
     duration : 300, 
     easing : 'easeInOutCubic', 
     callback: () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)

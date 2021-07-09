@@ -3,7 +3,7 @@
 <head>
 	<title>Scroll To Element - Example 3</title>
 	<link rel="stylesheet" type="text/css" href="./examples.css">
-	<script type="text/javascript" src="../dist/scrollTo.js"></script>
+	<script type="text/javascript" src="../dist/simplescrollTo.js"></script>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
 	</div>
 
 	<h1>Multiple Elements</h1>
-	<p>Set scroll for multiple elements with the same settings and <i>href</i> attribute as destination, using function <i>allScrollTo()</i></p>
+	<p>Set scroll for multiple elements with the same settings and <i>href</i> attribute as destination, using function <i>allSimpleScrollTo()</i></p>
 
 	<div id="destination-section-1" class="destination-section">Section 1</div>
 	<div id="destination-section-2" class="destination-section">Section 2</div>
@@ -24,7 +24,7 @@
 
 		let nav_items = document.querySelectorAll('#nav .item');
 
-		allScrollTo(nav_items, {
+		allSimpleScrollTo(nav_items, {
 			duration : 300, 
 			easing : 'easeInOutCubic', 
 			callback: () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)

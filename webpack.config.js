@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/scrollTo.js',
+  entry: './src/simpleScrollTo.js',
   output: {
-    filename: 'scrollTo.js',
+    filename: 'simpleScrollTo.js',
     libraryTarget: 'umd',
     path: path.resolve(__dirname, 'dist'),
   },
